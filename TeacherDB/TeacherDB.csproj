@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +60,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -67,10 +71,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyDataBaseDataSet3.Designer.cs">
+    <Compile Include="MyDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyDataBaseDataSet3.xsd</DependentUpon>
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,17 +90,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MyDataBaseDataSet3.xsc">
-      <DependentUpon>MyDataBaseDataSet3.xsd</DependentUpon>
+    <None Include="MyDBDataSet.xsc">
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MyDataBaseDataSet3.xsd">
+    <None Include="MyDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MyDataBaseDataSet3.Designer.cs</LastGenOutput>
+      <LastGenOutput>MyDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="MyDataBaseDataSet3.xss">
-      <DependentUpon>MyDataBaseDataSet3.xsd</DependentUpon>
+    <None Include="MyDBDataSet.xss">
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,11 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\empty.png" />
-    <Content Include="MyDataBase.mdf">
+    <Content Include="MyDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="MyDataBase_log.ldf">
+    <Content Include="MyDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MyDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBScript_RegExp_55">
+      <Guid>{3F4DACA7-160D-11D2-A8E9-00104B365C9F}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

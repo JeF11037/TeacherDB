@@ -20,9 +20,9 @@ namespace TeacherDB {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("MyDataBaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("MyDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class MyDataBaseDataSet : global::System.Data.DataSet {
+    public partial class MyDBDataSet : global::System.Data.DataSet {
         
         private StudentDataTable tableStudent;
         
@@ -30,7 +30,7 @@ namespace TeacherDB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public MyDataBaseDataSet() {
+        public MyDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TeacherDB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected MyDataBaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected MyDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TeacherDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            MyDataBaseDataSet cln = ((MyDataBaseDataSet)(base.Clone()));
+            MyDBDataSet cln = ((MyDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TeacherDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "MyDataBaseDataSet";
+            this.DataSetName = "MyDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/MyDataBaseDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/MyDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableStudent = new StudentDataTable();
@@ -225,7 +225,7 @@ namespace TeacherDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            MyDataBaseDataSet ds = new MyDataBaseDataSet();
+            MyDBDataSet ds = new MyDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -296,6 +296,22 @@ namespace TeacherDB {
             private global::System.Data.DataColumn columnFoto;
             
             private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnSubsidyF;
+            
+            private global::System.Data.DataColumn columnSubsidyS;
+            
+            private global::System.Data.DataColumn columnCaretakerF;
+            
+            private global::System.Data.DataColumn columnCaretakerS;
+            
+            private global::System.Data.DataColumn columnCaretakerFEmail;
+            
+            private global::System.Data.DataColumn columnCaretakerSEmail;
+            
+            private global::System.Data.DataColumn columnCaretakerFPhone;
+            
+            private global::System.Data.DataColumn columnCaretakerSPhone;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -404,6 +420,70 @@ namespace TeacherDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SubsidyFColumn {
+                get {
+                    return this.columnSubsidyF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SubsidySColumn {
+                get {
+                    return this.columnSubsidyS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerFColumn {
+                get {
+                    return this.columnCaretakerF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerSColumn {
+                get {
+                    return this.columnCaretakerS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerFEmailColumn {
+                get {
+                    return this.columnCaretakerFEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerSEmailColumn {
+                get {
+                    return this.columnCaretakerSEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerFPhoneColumn {
+                get {
+                    return this.columnCaretakerFPhone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CaretakerSPhoneColumn {
+                get {
+                    return this.columnCaretakerSPhone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +519,24 @@ namespace TeacherDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StudentRow AddStudentRow(int Id, string Name, string Surname, string ThisIsNotGroup, string DOB, string Phone, string Address, string Foto, string Email) {
+            public StudentRow AddStudentRow(
+                        int Id, 
+                        string Name, 
+                        string Surname, 
+                        string ThisIsNotGroup, 
+                        string DOB, 
+                        string Phone, 
+                        string Address, 
+                        string Foto, 
+                        string Email, 
+                        bool SubsidyF, 
+                        bool SubsidyS, 
+                        string CaretakerF, 
+                        string CaretakerS, 
+                        string CaretakerFEmail, 
+                        string CaretakerSEmail, 
+                        string CaretakerFPhone, 
+                        string CaretakerSPhone) {
                 StudentRow rowStudentRow = ((StudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -450,7 +547,15 @@ namespace TeacherDB {
                         Phone,
                         Address,
                         Foto,
-                        Email};
+                        Email,
+                        SubsidyF,
+                        SubsidyS,
+                        CaretakerF,
+                        CaretakerS,
+                        CaretakerFEmail,
+                        CaretakerSEmail,
+                        CaretakerFPhone,
+                        CaretakerSPhone};
                 rowStudentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentRow);
                 return rowStudentRow;
@@ -489,6 +594,14 @@ namespace TeacherDB {
                 this.columnAddress = base.Columns["Address"];
                 this.columnFoto = base.Columns["Foto"];
                 this.columnEmail = base.Columns["Email"];
+                this.columnSubsidyF = base.Columns["SubsidyF"];
+                this.columnSubsidyS = base.Columns["SubsidyS"];
+                this.columnCaretakerF = base.Columns["CaretakerF"];
+                this.columnCaretakerS = base.Columns["CaretakerS"];
+                this.columnCaretakerFEmail = base.Columns["CaretakerFEmail"];
+                this.columnCaretakerSEmail = base.Columns["CaretakerSEmail"];
+                this.columnCaretakerFPhone = base.Columns["CaretakerFPhone"];
+                this.columnCaretakerSPhone = base.Columns["CaretakerSPhone"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -512,26 +625,40 @@ namespace TeacherDB {
                 base.Columns.Add(this.columnFoto);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
+                this.columnSubsidyF = new global::System.Data.DataColumn("SubsidyF", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubsidyF);
+                this.columnSubsidyS = new global::System.Data.DataColumn("SubsidyS", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubsidyS);
+                this.columnCaretakerF = new global::System.Data.DataColumn("CaretakerF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerF);
+                this.columnCaretakerS = new global::System.Data.DataColumn("CaretakerS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerS);
+                this.columnCaretakerFEmail = new global::System.Data.DataColumn("CaretakerFEmail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerFEmail);
+                this.columnCaretakerSEmail = new global::System.Data.DataColumn("CaretakerSEmail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerSEmail);
+                this.columnCaretakerFPhone = new global::System.Data.DataColumn("CaretakerFPhone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerFPhone);
+                this.columnCaretakerSPhone = new global::System.Data.DataColumn("CaretakerSPhone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaretakerSPhone);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 2147483647;
-                this.columnSurname.AllowDBNull = false;
                 this.columnSurname.MaxLength = 2147483647;
-                this.columnThisIsNotGroup.AllowDBNull = false;
                 this.columnThisIsNotGroup.MaxLength = 2147483647;
-                this.columnDOB.AllowDBNull = false;
                 this.columnDOB.MaxLength = 2147483647;
-                this.columnPhone.AllowDBNull = false;
                 this.columnPhone.MaxLength = 2147483647;
-                this.columnAddress.AllowDBNull = false;
                 this.columnAddress.MaxLength = 2147483647;
-                this.columnFoto.AllowDBNull = false;
                 this.columnFoto.MaxLength = 2147483647;
-                this.columnEmail.AllowDBNull = false;
                 this.columnEmail.MaxLength = 2147483647;
+                this.columnCaretakerF.MaxLength = 2147483647;
+                this.columnCaretakerS.MaxLength = 2147483647;
+                this.columnCaretakerFEmail.MaxLength = 2147483647;
+                this.columnCaretakerSEmail.MaxLength = 2147483647;
+                this.columnCaretakerFPhone.MaxLength = 2147483647;
+                this.columnCaretakerSPhone.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -599,7 +726,7 @@ namespace TeacherDB {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                MyDataBaseDataSet ds = new MyDataBaseDataSet();
+                MyDBDataSet ds = new MyDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -687,7 +814,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableStudent.NameColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.NameColumn] = value;
@@ -698,7 +830,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Surname {
                 get {
-                    return ((string)(this[this.tableStudent.SurnameColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.SurnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Surname\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.SurnameColumn] = value;
@@ -709,7 +846,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ThisIsNotGroup {
                 get {
-                    return ((string)(this[this.tableStudent.ThisIsNotGroupColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.ThisIsNotGroupColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ThisIsNotGroup\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.ThisIsNotGroupColumn] = value;
@@ -720,7 +862,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DOB {
                 get {
-                    return ((string)(this[this.tableStudent.DOBColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.DOBColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DOB\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.DOBColumn] = value;
@@ -731,7 +878,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Phone {
                 get {
-                    return ((string)(this[this.tableStudent.PhoneColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.PhoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.PhoneColumn] = value;
@@ -742,7 +894,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Address {
                 get {
-                    return ((string)(this[this.tableStudent.AddressColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.AddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.AddressColumn] = value;
@@ -753,7 +910,12 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Foto {
                 get {
-                    return ((string)(this[this.tableStudent.FotoColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.FotoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Foto\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.FotoColumn] = value;
@@ -764,11 +926,336 @@ namespace TeacherDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Email {
                 get {
-                    return ((string)(this[this.tableStudent.EmailColumn]));
+                    try {
+                        return ((string)(this[this.tableStudent.EmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Student\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableStudent.EmailColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SubsidyF {
+                get {
+                    try {
+                        return ((bool)(this[this.tableStudent.SubsidyFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubsidyF\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.SubsidyFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SubsidyS {
+                get {
+                    try {
+                        return ((bool)(this[this.tableStudent.SubsidySColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubsidyS\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.SubsidySColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerF {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerF\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerS {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerS\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerFEmail {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerFEmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerFEmail\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerFEmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerSEmail {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerSEmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerSEmail\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerSEmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerFPhone {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerFPhoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerFPhone\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerFPhoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CaretakerSPhone {
+                get {
+                    try {
+                        return ((string)(this[this.tableStudent.CaretakerSPhoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaretakerSPhone\' in table \'Student\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudent.CaretakerSPhoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tableStudent.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableStudent.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSurnameNull() {
+                return this.IsNull(this.tableStudent.SurnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSurnameNull() {
+                this[this.tableStudent.SurnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsThisIsNotGroupNull() {
+                return this.IsNull(this.tableStudent.ThisIsNotGroupColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetThisIsNotGroupNull() {
+                this[this.tableStudent.ThisIsNotGroupColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDOBNull() {
+                return this.IsNull(this.tableStudent.DOBColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDOBNull() {
+                this[this.tableStudent.DOBColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhoneNull() {
+                return this.IsNull(this.tableStudent.PhoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhoneNull() {
+                this[this.tableStudent.PhoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAddressNull() {
+                return this.IsNull(this.tableStudent.AddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAddressNull() {
+                this[this.tableStudent.AddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFotoNull() {
+                return this.IsNull(this.tableStudent.FotoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFotoNull() {
+                this[this.tableStudent.FotoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableStudent.EmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEmailNull() {
+                this[this.tableStudent.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSubsidyFNull() {
+                return this.IsNull(this.tableStudent.SubsidyFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSubsidyFNull() {
+                this[this.tableStudent.SubsidyFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSubsidySNull() {
+                return this.IsNull(this.tableStudent.SubsidySColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSubsidySNull() {
+                this[this.tableStudent.SubsidySColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerFNull() {
+                return this.IsNull(this.tableStudent.CaretakerFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerFNull() {
+                this[this.tableStudent.CaretakerFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerSNull() {
+                return this.IsNull(this.tableStudent.CaretakerSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerSNull() {
+                this[this.tableStudent.CaretakerSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerFEmailNull() {
+                return this.IsNull(this.tableStudent.CaretakerFEmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerFEmailNull() {
+                this[this.tableStudent.CaretakerFEmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerSEmailNull() {
+                return this.IsNull(this.tableStudent.CaretakerSEmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerSEmailNull() {
+                this[this.tableStudent.CaretakerSEmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerFPhoneNull() {
+                return this.IsNull(this.tableStudent.CaretakerFPhoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerFPhoneNull() {
+                this[this.tableStudent.CaretakerFPhoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCaretakerSPhoneNull() {
+                return this.IsNull(this.tableStudent.CaretakerSPhoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCaretakerSPhoneNull() {
+                this[this.tableStudent.CaretakerSPhoneColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -807,7 +1294,7 @@ namespace TeacherDB {
         }
     }
 }
-namespace TeacherDB.MyDataBaseDataSetTableAdapters {
+namespace TeacherDB.MyDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -940,16 +1427,30 @@ namespace TeacherDB.MyDataBaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Foto", "Foto");
             tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("SubsidyF", "SubsidyF");
+            tableMapping.ColumnMappings.Add("SubsidyS", "SubsidyS");
+            tableMapping.ColumnMappings.Add("CaretakerF", "CaretakerF");
+            tableMapping.ColumnMappings.Add("CaretakerS", "CaretakerS");
+            tableMapping.ColumnMappings.Add("CaretakerFEmail", "CaretakerFEmail");
+            tableMapping.ColumnMappings.Add("CaretakerSEmail", "CaretakerSEmail");
+            tableMapping.ColumnMappings.Add("CaretakerFPhone", "CaretakerFPhone");
+            tableMapping.ColumnMappings.Add("CaretakerSPhone", "CaretakerSPhone");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Student] WHERE (([Id] = @Original_Id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Student] WHERE (([Id] = @Original_Id) AND ((@IsNull_SubsidyF =" +
+                " 1 AND [SubsidyF] IS NULL) OR ([SubsidyF] = @Original_SubsidyF)) AND ((@IsNull_S" +
+                "ubsidyS = 1 AND [SubsidyS] IS NULL) OR ([SubsidyS] = @Original_SubsidyS)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SubsidyF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SubsidyF", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SubsidyS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SubsidyS", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Student] ([Id], [Name], [Surname], [ThisIsNotGroup], [DOB], [Phone], [Address], [Foto], [Email]) VALUES (@Id, @Name, @Surname, @ThisIsNotGroup, @DOB, @Phone, @Address, @Foto, @Email);
-SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM Student WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Student] ([Id], [Name], [Surname], [ThisIsNotGroup], [DOB], [Phone], [Address], [Foto], [Email], [SubsidyF], [SubsidyS], [CaretakerF], [CaretakerS], [CaretakerFEmail], [CaretakerSEmail], [CaretakerFPhone], [CaretakerSPhone]) VALUES (@Id, @Name, @Surname, @ThisIsNotGroup, @DOB, @Phone, @Address, @Foto, @Email, @SubsidyF, @SubsidyS, @CaretakerF, @CaretakerS, @CaretakerFEmail, @CaretakerSEmail, @CaretakerFPhone, @CaretakerSPhone);
+SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email, SubsidyF, SubsidyS, CaretakerF, CaretakerS, CaretakerFEmail, CaretakerSEmail, CaretakerFPhone, CaretakerSPhone FROM Student WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -960,10 +1461,18 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Foto", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Foto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SubsidyF", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SubsidyS", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerFEmail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerFEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerSEmail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerSEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerFPhone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerFPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerSPhone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerSPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Student] SET [Id] = @Id, [Name] = @Name, [Surname] = @Surname, [ThisIsNotGroup] = @ThisIsNotGroup, [DOB] = @DOB, [Phone] = @Phone, [Address] = @Address, [Foto] = @Foto, [Email] = @Email WHERE (([Id] = @Original_Id));
-SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM Student WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Student] SET [Id] = @Id, [Name] = @Name, [Surname] = @Surname, [ThisIsNotGroup] = @ThisIsNotGroup, [DOB] = @DOB, [Phone] = @Phone, [Address] = @Address, [Foto] = @Foto, [Email] = @Email, [SubsidyF] = @SubsidyF, [SubsidyS] = @SubsidyS, [CaretakerF] = @CaretakerF, [CaretakerS] = @CaretakerS, [CaretakerFEmail] = @CaretakerFEmail, [CaretakerSEmail] = @CaretakerSEmail, [CaretakerFPhone] = @CaretakerFPhone, [CaretakerSPhone] = @CaretakerSPhone WHERE (([Id] = @Original_Id) AND ((@IsNull_SubsidyF = 1 AND [SubsidyF] IS NULL) OR ([SubsidyF] = @Original_SubsidyF)) AND ((@IsNull_SubsidyS = 1 AND [SubsidyS] IS NULL) OR ([SubsidyS] = @Original_SubsidyS)));
+SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email, SubsidyF, SubsidyS, CaretakerF, CaretakerS, CaretakerFEmail, CaretakerSEmail, CaretakerFPhone, CaretakerSPhone FROM Student WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -974,14 +1483,26 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Foto", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Foto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SubsidyF", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SubsidyS", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerFEmail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerFEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerSEmail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerSEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerFPhone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerFPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaretakerSPhone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CaretakerSPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SubsidyF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SubsidyF", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SubsidyS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SubsidyS", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SubsidyS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TeacherDB.Properties.Settings.Default.MyDataBaseConnectionString;
+            this._connection.ConnectionString = global::TeacherDB.Properties.Settings.Default.MyDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -990,8 +1511,9 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM d" +
-                "bo.Student";
+            this._commandCollection[0].CommandText = "SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email, Subsi" +
+                "dyF, SubsidyS, CaretakerF, CaretakerS, CaretakerFEmail, CaretakerSEmail, Caretak" +
+                "erFPhone, CaretakerSPhone FROM dbo.Student";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -999,7 +1521,7 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MyDataBaseDataSet.StudentDataTable dataTable) {
+        public virtual int Fill(MyDBDataSet.StudentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1012,9 +1534,9 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MyDataBaseDataSet.StudentDataTable GetData() {
+        public virtual MyDBDataSet.StudentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MyDataBaseDataSet.StudentDataTable dataTable = new MyDataBaseDataSet.StudentDataTable();
+            MyDBDataSet.StudentDataTable dataTable = new MyDBDataSet.StudentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1022,14 +1544,14 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MyDataBaseDataSet.StudentDataTable dataTable) {
+        public virtual int Update(MyDBDataSet.StudentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MyDataBaseDataSet dataSet) {
+        public virtual int Update(MyDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Student");
         }
         
@@ -1052,8 +1574,24 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id) {
+        public virtual int Delete(int Original_Id, global::System.Nullable<bool> Original_SubsidyF, global::System.Nullable<bool> Original_SubsidyS) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_SubsidyF.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_SubsidyF.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SubsidyS.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_SubsidyS.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1074,55 +1612,120 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Name, string Surname, string ThisIsNotGroup, string DOB, string Phone, string Address, string Foto, string Email) {
+        public virtual int Insert(
+                    int Id, 
+                    string Name, 
+                    string Surname, 
+                    string ThisIsNotGroup, 
+                    string DOB, 
+                    string Phone, 
+                    string Address, 
+                    string Foto, 
+                    string Email, 
+                    global::System.Nullable<bool> SubsidyF, 
+                    global::System.Nullable<bool> SubsidyS, 
+                    string CaretakerF, 
+                    string CaretakerS, 
+                    string CaretakerFEmail, 
+                    string CaretakerSEmail, 
+                    string CaretakerFPhone, 
+                    string CaretakerSPhone) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
             }
             if ((Surname == null)) {
-                throw new global::System.ArgumentNullException("Surname");
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Surname));
             }
             if ((ThisIsNotGroup == null)) {
-                throw new global::System.ArgumentNullException("ThisIsNotGroup");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ThisIsNotGroup));
             }
             if ((DOB == null)) {
-                throw new global::System.ArgumentNullException("DOB");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(DOB));
             }
             if ((Phone == null)) {
-                throw new global::System.ArgumentNullException("Phone");
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Phone));
             }
             if ((Address == null)) {
-                throw new global::System.ArgumentNullException("Address");
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Address));
             }
             if ((Foto == null)) {
-                throw new global::System.ArgumentNullException("Foto");
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Foto));
             }
             if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Email));
+            }
+            if ((SubsidyF.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(SubsidyF.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((SubsidyS.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(SubsidyS.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((CaretakerF == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(CaretakerF));
+            }
+            if ((CaretakerS == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(CaretakerS));
+            }
+            if ((CaretakerFEmail == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(CaretakerFEmail));
+            }
+            if ((CaretakerSEmail == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(CaretakerSEmail));
+            }
+            if ((CaretakerFPhone == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(CaretakerFPhone));
+            }
+            if ((CaretakerSPhone == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(CaretakerSPhone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1144,57 +1747,141 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Name, string Surname, string ThisIsNotGroup, string DOB, string Phone, string Address, string Foto, string Email, int Original_Id) {
+        public virtual int Update(
+                    int Id, 
+                    string Name, 
+                    string Surname, 
+                    string ThisIsNotGroup, 
+                    string DOB, 
+                    string Phone, 
+                    string Address, 
+                    string Foto, 
+                    string Email, 
+                    global::System.Nullable<bool> SubsidyF, 
+                    global::System.Nullable<bool> SubsidyS, 
+                    string CaretakerF, 
+                    string CaretakerS, 
+                    string CaretakerFEmail, 
+                    string CaretakerSEmail, 
+                    string CaretakerFPhone, 
+                    string CaretakerSPhone, 
+                    int Original_Id, 
+                    global::System.Nullable<bool> Original_SubsidyF, 
+                    global::System.Nullable<bool> Original_SubsidyS) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
             }
             if ((Surname == null)) {
-                throw new global::System.ArgumentNullException("Surname");
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Surname));
             }
             if ((ThisIsNotGroup == null)) {
-                throw new global::System.ArgumentNullException("ThisIsNotGroup");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ThisIsNotGroup));
             }
             if ((DOB == null)) {
-                throw new global::System.ArgumentNullException("DOB");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(DOB));
             }
             if ((Phone == null)) {
-                throw new global::System.ArgumentNullException("Phone");
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Phone));
             }
             if ((Address == null)) {
-                throw new global::System.ArgumentNullException("Address");
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Address));
             }
             if ((Foto == null)) {
-                throw new global::System.ArgumentNullException("Foto");
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Foto));
             }
             if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Email));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Id));
+            if ((SubsidyF.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(SubsidyF.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((SubsidyS.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(SubsidyS.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((CaretakerF == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(CaretakerF));
+            }
+            if ((CaretakerS == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(CaretakerS));
+            }
+            if ((CaretakerFEmail == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(CaretakerFEmail));
+            }
+            if ((CaretakerSEmail == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(CaretakerSEmail));
+            }
+            if ((CaretakerFPhone == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(CaretakerFPhone));
+            }
+            if ((CaretakerSPhone == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(CaretakerSPhone));
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Id));
+            if ((Original_SubsidyF.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_SubsidyF.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SubsidyS.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(Original_SubsidyS.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1215,8 +1902,27 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Surname, string ThisIsNotGroup, string DOB, string Phone, string Address, string Foto, string Email, int Original_Id) {
-            return this.Update(Original_Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email, Original_Id);
+        public virtual int Update(
+                    string Name, 
+                    string Surname, 
+                    string ThisIsNotGroup, 
+                    string DOB, 
+                    string Phone, 
+                    string Address, 
+                    string Foto, 
+                    string Email, 
+                    global::System.Nullable<bool> SubsidyF, 
+                    global::System.Nullable<bool> SubsidyS, 
+                    string CaretakerF, 
+                    string CaretakerS, 
+                    string CaretakerFEmail, 
+                    string CaretakerSEmail, 
+                    string CaretakerFPhone, 
+                    string CaretakerSPhone, 
+                    int Original_Id, 
+                    global::System.Nullable<bool> Original_SubsidyF, 
+                    global::System.Nullable<bool> Original_SubsidyS) {
+            return this.Update(Original_Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email, SubsidyF, SubsidyS, CaretakerF, CaretakerS, CaretakerFEmail, CaretakerSEmail, CaretakerFPhone, CaretakerSPhone, Original_Id, Original_SubsidyF, Original_SubsidyS);
         }
     }
     
@@ -1311,7 +2017,7 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(MyDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(MyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1330,7 +2036,7 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(MyDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(MyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1348,7 +2054,7 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(MyDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(MyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1390,7 +2096,7 @@ SELECT Id, Name, Surname, ThisIsNotGroup, DOB, Phone, Address, Foto, Email FROM 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(MyDataBaseDataSet dataSet) {
+        public virtual int UpdateAll(MyDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
