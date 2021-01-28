@@ -39,12 +39,16 @@ namespace TeacherDB
 
         public Form1()
         {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
             InitializeComponent();
-            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\levpe\source\repos\TeacherDB\TeacherDB\MyDB.mdf;Integrated Security=True");
+            connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\opilane\Source\Repos\TeacherDB\TeacherDB\MyDB.mdf;Integrated Security=True");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'myDBDataSet1.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter1.Fill(this.myDBDataSet1.Student);
             // TODO: This line of code loads data into the 'myDBDataSet.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter.Fill(this.myDBDataSet.Student);
         }
@@ -155,13 +159,20 @@ namespace TeacherDB
 
         private void ShowGroup(string group)
         {
-            connection.Open();
-            DataTable tbl = new DataTable();
-            adapter = new SqlDataAdapter("SELECT * FROM dbo.Student WHERE ThisIsNotGroup = @ThisIsNotGroup", connection);
-            adapter.SelectCommand.Parameters.AddWithValue("@ThisIsNotGroup", group);
-            adapter.Fill(tbl);
-            DGV_table.DataSource = tbl;
-            connection.Close();
+            try
+            {
+                connection.Open();
+                DataTable tbl = new DataTable();
+                adapter = new SqlDataAdapter("SELECT * FROM dbo.Student WHERE ThisIsNotGroup = @ThisIsNotGroup", connection);
+                adapter.SelectCommand.Parameters.AddWithValue("@ThisIsNotGroup", group);
+                adapter.Fill(tbl);
+                DGV_table.DataSource = tbl;
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Table is empty !");
+            }
         }
 
         private void DisplayDataGrid()
@@ -318,12 +329,19 @@ namespace TeacherDB
             TableFormat(false);
             ClearValues();
 
-            connection.Open();
-            adapter = new SqlDataAdapter("SELECT * FROM dbo.Student", connection);
-            DataTable tbl = new DataTable();
-            adapter.Fill(tbl);
-            DGV_table.DataSource = tbl;
-            connection.Close();
+            try
+            {
+                connection.Open();
+                adapter = new SqlDataAdapter("SELECT * FROM dbo.Student", connection);
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                DGV_table.DataSource = tbl;
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Table is empty !");
+            }
         }
 
         private void DGV_table_CellClick(object sender, DataGridViewCellEventArgs e)
